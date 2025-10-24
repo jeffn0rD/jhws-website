@@ -1,0 +1,94 @@
+---
+// Footer component
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Joshua House Inc.</h3>
+        <p>A federally recognized 501(c)(3) non-profit organization</p>
+        <p>Founded in Irasburg, VT in 1996</p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>Joshua House Warming Shelter</p>
+        <p>PO Box 291</p>
+        <p>Newport, VT 05855</p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Mission</h3>
+        <p>Dedicated to helping prevent homelessness by providing people a hand-up, not a hand-out.</p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; {currentYear} Joshua House Warming Shelter. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: linear-gradient(135deg, #1a3a4d 0%, #0f2533 100%);
+    color: white;
+    padding: 3rem 0 1rem;
+    margin-top: 4rem;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer-section h3 {
+    color: #4a90a4;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .footer-section p {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+    opacity: 0.9;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(74, 144, 164, 0.3);
+    padding-top: 1.5rem;
+    text-align: center;
+  }
+
+  .footer-bottom p {
+    margin: 0;
+    opacity: 0.8;
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 768px) {
+    .footer {
+      padding: 2rem 0 1rem;
+    }
+
+    .footer-content {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .footer-section {
+      text-align: center;
+    }
+  }
+</style>
+</footer>
