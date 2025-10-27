@@ -78,7 +78,7 @@ import Layout from '../layouts/Layout.astro';
 
       <div id="contact" class="contact-section">
         <h2>Get In Touch</h2>
-        <p>For more information or to learn how you can help, please contact us:</p>
+        <p>For questions or inquiries, contact us at <a href="mailto:info@jhwsnewport.org" class="email-link">info@jhwsnewport.org</a></p>
         <div class="contact-info">
           <p><strong>Mailing Address:</strong></p>
           <address>
@@ -86,8 +86,10 @@ import Layout from '../layouts/Layout.astro';
             PO Box 291<br>
             Newport, VT 05855
           </address>
+          <p><strong>Email:</strong></p>
+          <p><a href="mailto:info@jhwsnewport.org" class="email-link">info@jhwsnewport.org</a></p>
         </div>
-        <p class="contact-note">Additional contact information will be added as we approach our opening date.</p>
+        <p class="contact-note">We look forward to hearing from you!</p>
       </div>
     </div>
   </section>
@@ -313,6 +315,19 @@ import Layout from '../layouts/Layout.astro';
     color: #666;
     font-style: italic;
     margin-top: 1rem;
+  }
+
+  .email-link {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-color 0.3s ease;
+  }
+
+  .email-link:hover {
+    color: var(--secondary-color);
+    border-bottom-color: var(--secondary-color);
   }
 
   @media (max-width: 768px) {

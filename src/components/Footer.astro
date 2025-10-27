@@ -17,6 +17,9 @@ const currentYear = new Date().getFullYear();
         <p>Joshua House Warming Shelter</p>
         <p>PO Box 291</p>
         <p>Newport, VT 05855</p>
+        <p class="footer-email">
+          <a href="mailto:support@jhwsnewport.org">support@jhwsnewport.org</a>
+        </p>
       </div>
       
       <div class="footer-section">
@@ -74,6 +77,21 @@ const currentYear = new Date().getFullYear();
     margin: 0;
     opacity: 0.8;
     font-size: 0.9rem;
+  }
+
+  .footer-email {
+    margin-top: 0.5rem;
+  }
+
+  .footer-email a {
+    color: #4a90a4;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-email a:hover {
+    color: #6bb3c9;
+    text-decoration: underline;
   }
 
   @media (max-width: 768px) {
