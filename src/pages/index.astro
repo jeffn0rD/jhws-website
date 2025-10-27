@@ -41,11 +41,14 @@ import Layout from '../layouts/Layout.astro';
         <div class="donate-options">
           <div class="donate-card">
             <h3>Donate Online</h3>
+            <!--
             <p>Make a tax-deductible donation through our secure online platform.</p>
             <button class="donate-button" id="donorbox-button">
               Donate Now via Donorbox
             </button>
             <p class="note">Online donation integration coming soon</p>
+            -->
+            <a class="dbox-donation-button" id="preview_inline_popup_button" href="https://donorbox.org/joshua-house-warming-shelter?" style="background: rgb(44, 95, 124); color: rgb(255, 255, 255); text-decoration: none; font-family: Verdana, sans-serif; display: flex; gap: 8px; width: fit-content; font-size: 16px; border-radius: 5px; line-height: 24px; padding: 8px 24px;"><img src="https://donorbox.org/images/white_logo.svg">Donate</a>            
           </div>
           
           <div class="donate-card">
@@ -357,10 +360,5 @@ import Layout from '../layouts/Layout.astro';
   }
 </style>
 
-<script>
-  // Placeholder for Donorbox integration
-  document.getElementById('donorbox-button')?.addEventListener('click', () => {
-    alert('Donorbox integration will be configured once you provide your Donorbox account details. This button will then open your donation form.');
-  });
-</script>
+<script type="text/javascript" defer="" src="https://donorbox.org/install-popup-button.js" id="donorbox-popup-button-installer"> </script>
 </Layout>
