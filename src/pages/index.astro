@@ -24,6 +24,14 @@ import Layout from '../layouts/Layout.astro';
           <p class="opening-date">The end of November 2025, is the targeted opening date.</p>
           <p>Please check back to see updates - and how you can help.</p>
         </div>
+
+        <div class="progress-link-box">
+          <h3>🏗️ Renovation in Progress</h3>
+          <p>See the transformation as we prepare the warming shelter for our community.</p>
+          <a href="/gallery" class="progress-link">
+            View Warming Shelter Project Progress →
+          </a>
+        </div>
       </div>
 
       <div id="donate" class="donate-section">
@@ -146,6 +154,46 @@ import Layout from '../layouts/Layout.astro';
     font-weight: 600;
     color: var(--accent-color);
     margin-bottom: 1rem;
+  }
+
+  .progress-link-box {
+    background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%);
+    border-left: 4px solid var(--accent-color);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .progress-link-box h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .progress-link-box p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: #555;
+  }
+
+  .progress-link {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .progress-link:hover {
+    background-color: #b45309;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
   }
 
   .donate-section {
