@@ -17,7 +17,7 @@ const images = [
 
 <BootstrapLayout title="Project Gallery - Joshua House Warming Shelter">
   <!-- Gallery Hero Section -->
-  <section class="bg-gradient-primary-to-secondary text-white py-5" style="margin-top: 56px;">
+  <section class="bg-gradient-primary-to-secondary text-white gallery-hero">
     <div class="container px-5">
       <div class="row gx-5 justify-content-center">
         <div class="col-lg-8 text-center">
@@ -63,6 +63,18 @@ const images = [
 </BootstrapLayout>
 
 <style>
+  /* Fix for navbar overlap on mobile */
+  .gallery-hero {
+    padding-top: calc(56px + 3rem);
+    padding-bottom: 3rem;
+  }
+
+  @media (max-width: 576px) {
+    .gallery-hero {
+      padding-top: calc(70px + 2rem); /* Extra padding for mobile navbar */
+    }
+  }
+
   .gallery-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
