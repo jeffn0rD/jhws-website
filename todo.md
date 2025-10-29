@@ -28,4 +28,4 @@
 - [x] Verify gallery.astro uses BootstrapLayout correctly
 - [x] Ensure all navigation links work
 - [x] Ensure Donate button triggers Donorbox popup
-- [ ] Commit and push changes
+- [x] Commit and push changes
