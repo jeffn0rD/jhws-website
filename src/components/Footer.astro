@@ -1,113 +1,24 @@
 ---
-// Footer component
-const currentYear = new Date().getFullYear();
+// Footer component for Bootstrap theme
 ---
 
-<footer class="footer">
-  <div class="container">
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>Joshua House Inc.</h3>
-        <p>A federally recognized 501(c)(3) non-profit organization</p>
-        <p>Founded in Irasburg, VT in 1996</p>
-      </div>
-      
-      <div class="footer-section">
-        <h3>Contact</h3>
-        <p>Joshua House Warming Shelter</p>
-        <p>PO Box 291</p>
-        <p>Newport, VT 05855</p>
-		<br/>
-        <p class="footer-email">
-          <i>Website or Email issues?<i> <a href="mailto:support@jhwsnewport.org">support@jhwsnewport.org</a>
-        </p>
-      </div>
-      
-      <div class="footer-section">
-        <h3>Mission</h3>
-        <p>Dedicated to helping prevent homelessness by providing people a hand-up, not a hand-out.</p>
-      </div>
+<footer class="bg-black text-center py-5">
+    <div class="container px-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-8">
+                <div class="text-white-50 mb-4">
+                    <h5 class="text-white mb-3">Joshua House Inc.</h5>
+                    <p class="mb-2">A federally recognized 501(c)(3) non-profit organization</p>
+                    <p class="mb-2">Founded in Irasburg, VT in 1996</p>
+                    <p class="mb-4">
+                        <i>Website or Email issues?</i> &nbsp; <a href="mailto:support@jhwsnewport.org" class="text-white-50">support@jhwsnewport.org</a>
+                    </p>
+                </div>
+                <br/>
+                <div class="text-white-50 small">
+                    <div class="mb-2">&copy; Joshua House Warming Shelter {new Date().getFullYear()}. All Rights Reserved.</div>
+                </div>
+            </div>
+        </div>
     </div>
-    
-    <div class="footer-bottom">
-      <p>&copy; {currentYear} Joshua House Warming Shelter. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
-
-<style>
-  .footer {
-    background: linear-gradient(135deg, #1a3a4d 0%, #0f2533 100%);
-    color: white;
-    padding: 3rem 0 1rem;
-    margin-top: 4rem;
-  }
-
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-  }
-
-  .footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  .footer-section h3 {
-    color: #4a90a4;
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-  }
-
-  .footer-section p {
-    margin: 0.5rem 0;
-    line-height: 1.6;
-    opacity: 0.9;
-  }
-
-  .footer-bottom {
-    border-top: 1px solid rgba(74, 144, 164, 0.3);
-    padding-top: 1.5rem;
-    text-align: center;
-  }
-
-  .footer-bottom p {
-    margin: 0;
-    opacity: 0.8;
-    font-size: 0.9rem;
-  }
-
-  .footer-email {
-    margin-top: 0.5rem;
-  }
-
-  .footer-email a {
-    color: #4a90a4;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-
-  .footer-email a:hover {
-    color: #6bb3c9;
-    text-decoration: underline;
-  }
-
-  @media (max-width: 768px) {
-    .footer {
-      padding: 2rem 0 1rem;
-    }
-
-    .footer-content {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-
-    .footer-section {
-      text-align: center;
-    }
-  }
-</style>
 </footer>
