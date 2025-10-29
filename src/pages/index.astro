@@ -11,8 +11,9 @@ import BootstrapLayout from '../layouts/BootstrapLayout.astro';
           <!-- Masthead text-->
           <div class="mb-5 mb-lg-0 text-center text-lg-start">
             <h1 class="display-1 lh-1 mb-3">Joshua House Warming Shelter</h1>
-            <p class="lead fw-normal text-muted mb-3">Providing a Hand-up in the NEK since 1996</p>
-            <p class="lead fw-normal text-muted mb-5">Located on Pleasant St., in Newport, VT</p>
+            <p class="lead fw-normal text-muted mb-3">A part of Joshua House, Inc. A federally recognized 501c3 non-profit organization</p>
+			<p class="lead fw-normal text-muted mb-3">501 Pleasant St., Newport, VT</p>
+			<p class="lead fw-normal text-muted mb-3"><b>Opening soon!</b></p>
             <div class="d-flex flex-column flex-lg-row align-items-center">
               <a class="btn btn-primary btn-lg rounded-pill px-4 me-lg-3 mb-3 mb-lg-0" href="#donate">
                 <i class="bi-heart-fill me-2"></i>
@@ -36,33 +37,56 @@ import BootstrapLayout from '../layouts/BootstrapLayout.astro';
     </div>
   </header>
 
+	<!-- SECTION 1 -->
   <!-- Quote/testimonial aside-->
   <aside class="text-center bg-gradient-primary-to-secondary">
     <div class="container px-5">
       <div class="row gx-5 justify-content-center">
         <div class="col-xl-8">
-          <div class="h2 fs-1 text-white mb-4">Dedicated to helping prevent homelessness by providing people a hand-up, not a hand-out.</div>
-          <p class="text-white-50">Joshua House Inc. - Since 1996</p>
+			<div class="h2 fs-1 text-white mb-4">
+		  The Joshua House Warming Shelter (JHWS) started with an
+Advisory Board looking to provide a warm place for people
+to land on cold winter nights. The Board grew to include (in
+no particular order): The Church of God, Newport City, State
+of VT, NEKCA, Newport Police, The United Church of
+
+Newport, St. Mark’s Episcopal Church, Life in Christ Fel-
+lowship, Derby Community Church.
+
+			</div>
+          <!--p class="text-white-50">Joshua House Inc. - Since 1996</p-->
         </div>
       </div>
     </div>
   </aside>
 
+<!-- SECTION 2 -->
   <!-- Opening Date Section-->
   <section class="bg-light" id="opening">
     <div class="container px-5">
       <div class="row gx-5 align-items-center justify-content-center">
         <div class="col-lg-8 text-center">
           <div class="badge bg-gradient-primary-to-secondary text-white mb-4">
-            <div class="text-uppercase">Opening Soon</div>
+            <div class="text-uppercase">Renovation in progress.</div>
           </div>
           <h2 class="display-4 lh-1 mb-4">The end of November 2025</h2>
           <p class="lead fw-normal text-muted mb-5">is the targeted opening date. Please check back to see updates - and how you can help.</p>
         </div>
       </div>
+	  
+		<div class="row">
+		  <div class="col-12 text-center">
+			<a class="btn btn-outline-light btn-lg rounded-pill px-4" href="/gallery">
+			  <i class="bi-camera-fill me-2"></i>
+			  View Project Gallery
+			</a>
+		  </div>
+		</div>
+			
     </div>
   </section>
 
+<!-- SECTION 3 -->
   <!-- Renovation Progress Section-->
   <section class="bg-gradient-primary-to-secondary" id="renovation">
     <div class="container px-5">
@@ -99,7 +123,60 @@ import BootstrapLayout from '../layouts/BootstrapLayout.astro';
     </div>
   </section>
 
+
+  <!-- Contact Section-->
+  <section id="contact">
+    <div class="container px-5">
+      <div class="row gx-5 align-items-center justify-content-center">
+        <div class="col-lg-8">
+          <div class="text-center">
+            <h2 class="display-4 lh-1 mb-4">Get In Touch</h2>
+            <p class="lead fw-normal text-muted mb-5">For questions or inquiries, contact us at <a href="mailto:info@jhwsnewport.org" class="text-gradient fw-bold">info@jhwsnewport.org</a></p>
+          </div>
+		  
+		  
+			Carpentry skills, building materials, etc.: Contact Rick Ufford-Chase
+			Overnight Volunteers to register for training: Contact Casey Winterson
+			Misc. items to donate: Denise Niemira
+			Funding matches or fundraisers you wish to hold: Tim Daley
+		  
+		  
+          <div class="card border-0 shadow-lg">
+            <div class="card-body p-5">
+              <div class="row gx-5">
+                <div class="col-md-6 mb-4 mb-md-0">
+                  <div class="text-center">
+                    <i class="bi-envelope icon-feature text-gradient d-block mb-3" style="font-size: 2rem;"></i>
+                    <h5 class="font-alt mb-2">Email</h5>
+                    <p class="text-muted mb-0">
+                      <a href="mailto:info@jhwsnewport.org" class="text-gradient">info@jhwsnewport.org</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="text-center">
+                    <i class="bi-mailbox icon-feature text-gradient d-block mb-3" style="font-size: 2rem;"></i>
+                    <h5 class="font-alt mb-2">Mailing Address</h5>
+                    <address class="text-muted mb-0" style="font-style: normal;">
+                      Joshua House Warming Shelter<br>
+                      PO Box 291<br>
+                      Newport, VT 05855
+                    </address>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- SECTION 4 -->
+
   <!-- About Section-->
+	<!--
   <section id="about">
     <div class="container px-5">
       <div class="row gx-5 align-items-center">
@@ -108,7 +185,7 @@ import BootstrapLayout from '../layouts/BootstrapLayout.astro';
             <div class="row gx-5">
               <div class="col-md-6 mb-5">
                 <div class="text-center">
-                  <i class="bi-house icon-feature text-gradient d-block mb-3" style="font-size: 3rem;"></i>
+                  <i class="bi-house- icon-feature text-gradient d-block mb-3" style="font-size: 3rem;"></i>
                   <h3 class="font-alt">Our Mission</h3>
                   <p class="text-muted mb-0">Helping prevent homelessness by providing people a hand-up, not a hand-out.</p>
                 </div>
@@ -153,13 +230,18 @@ import BootstrapLayout from '../layouts/BootstrapLayout.astro';
       </div>
     </div>
   </section>
-
+	-->
+	
   <!-- Donate Section-->
   <section class="bg-light" id="donate">
     <div class="container px-5">
       <div class="text-center mb-5">
-        <h2 class="display-4 lh-1 mb-4">Support Our Mission</h2>
-        <p class="lead fw-normal text-muted mb-5">Your donation helps us provide a hand-up to those in need.</p>
+        <h2 class="display-4 lh-1 mb-4">Help Us Support Our Mission</h2>
+        <p class="lead fw-normal text-muted mb-5">
+		Your donation helps us to build, install, purchase,
+and create an environment to house 10 cots with 2
+volunteers, during the coldest nights of winter.
+</p>
       </div>
       <div class="row gx-5 justify-content-center">
         <div class="col-lg-5 mb-5 mb-lg-0">
@@ -197,43 +279,4 @@ import BootstrapLayout from '../layouts/BootstrapLayout.astro';
     </div>
   </section>
 
-  <!-- Contact Section-->
-  <section id="contact">
-    <div class="container px-5">
-      <div class="row gx-5 align-items-center justify-content-center">
-        <div class="col-lg-8">
-          <div class="text-center">
-            <h2 class="display-4 lh-1 mb-4">Get In Touch</h2>
-            <p class="lead fw-normal text-muted mb-5">For questions or inquiries, contact us at <a href="mailto:info@jhwsnewport.org" class="text-gradient fw-bold">info@jhwsnewport.org</a></p>
-          </div>
-          <div class="card border-0 shadow-lg">
-            <div class="card-body p-5">
-              <div class="row gx-5">
-                <div class="col-md-6 mb-4 mb-md-0">
-                  <div class="text-center">
-                    <i class="bi-envelope icon-feature text-gradient d-block mb-3" style="font-size: 2rem;"></i>
-                    <h5 class="font-alt mb-2">Email</h5>
-                    <p class="text-muted mb-0">
-                      <a href="mailto:info@jhwsnewport.org" class="text-gradient">info@jhwsnewport.org</a>
-                    </p>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="text-center">
-                    <i class="bi-mailbox icon-feature text-gradient d-block mb-3" style="font-size: 2rem;"></i>
-                    <h5 class="font-alt mb-2">Mailing Address</h5>
-                    <address class="text-muted mb-0" style="font-style: normal;">
-                      Joshua House Warming Shelter<br>
-                      PO Box 291<br>
-                      Newport, VT 05855
-                    </address>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 </BootstrapLayout>
