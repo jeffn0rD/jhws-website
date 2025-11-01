@@ -11083,12 +11083,12 @@ footer a:hover, footer a:active, footer a:focus {
 .masthead {
   background-color: #f8f9fa;
   padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 0rem;
 }
 
-@media (min-width: 992px)
+@media (min-width: 992px) {
 	.masthead {
-	  padding-bottom: 0rem;
+	  padding-bottom: 2rem;
 	}
 }
 
