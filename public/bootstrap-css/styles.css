@@ -11083,7 +11083,15 @@ footer a:hover, footer a:active, footer a:focus {
 .masthead {
   background-color: #f8f9fa;
   padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 0;
+}
+
+@media (min-width: 992px)
+	.masthead {
+	  background-color: #f8f9fa;
+	  padding-top: 2rem;
+	  padding-bottom: 2rem;
+	}
 }
 .masthead .masthead-device-mockup {
   display: flex;
