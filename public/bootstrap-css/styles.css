@@ -7672,7 +7672,7 @@ textarea.form-control-lg {
 }
 
 .mb-5 {
-  margin-bottom: 3rem !important;
+  margin-bottom: 2rem !important;
 }
 
 .mb-auto {
@@ -11083,7 +11083,7 @@ footer a:hover, footer a:active, footer a:focus {
 .masthead {
   background-color: #f8f9fa;
   padding-top: 2rem;
-  padding-bottom: 5rem;
+  padding-bottom: 2rem;
 }
 .masthead .masthead-device-mockup {
   display: flex;
