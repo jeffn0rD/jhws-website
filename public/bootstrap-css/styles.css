@@ -7672,7 +7672,13 @@ textarea.form-control-lg {
 }
 
 .mb-5 {
-  margin-bottom: 2rem !important;
+  margin-bottom: 0rem !important;
+}
+
+@media (min-width: 992px) {
+	.mb-5 {
+	  margin-bottom: 2rem !important;
+	}
 }
 
 .mb-auto {
