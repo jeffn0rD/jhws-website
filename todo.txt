@@ -1,0 +1,3 @@
+
+
+- fix section colors (doesnt alternate near bottom)
