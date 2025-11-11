@@ -1,3 +1,4 @@
 
 
 - fix section colors (doesnt alternate near bottom)
+- video is https://www.youtube.com/watch?v=P2aaFJucszs
