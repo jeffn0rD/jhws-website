@@ -1,7 +1,7 @@
 ---
 // Home page header/masthead section
 import { Image } from 'astro:assets';
-import imgReference from '../../images/JoshuaHouse.jpg';
+import imgReference from '/images/JoshuaHouse.jpg';
 ---
 
 <header class="masthead">
@@ -21,7 +21,7 @@ import imgReference from '../../images/JoshuaHouse.jpg';
               Donate
             </a>
           </div>
-		  <Image src={imgReference.src} inferSize={true} alt="Joshua House Warming Shelter Benefit" />
+		  <Image src={imgReference} inferSize={true} alt="Joshua House Warming Shelter Benefit" />
         </div>
       </div>
 	  <!--
