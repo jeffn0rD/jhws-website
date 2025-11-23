@@ -1,0 +1,146 @@
+---
+// Option 4: Constrained Size with "View Full Size" Link
+import { Image } from 'astro:assets';
+import imgReference from '../../images/JoshuaHouse.jpg';
+---
+
+<header class="masthead">
+  <div class="container px-5">
+    <div class="gx-5 align-items-center">
+      <div class="col-lg-auto">
+        <!-- Masthead text-->
+        <div class="mb-5 mb-lg-auto text-center">
+          <h1 class="display-1 lh-1 mb-3">Joshua House Warming Shelter</h1>
+          <p class="lead fw-normal text-muted mb-3">A part of Joshua House, Inc. A federally recognized 501c3 non-profit organization</p>
+          <p class="lead fw-normal text-muted mb-3">501 Pleasant St., Newport, VT</p>
+          <p class="lead fw-normal text-muted mb-3"><b>Opening soon!</b></p>
+		  <br/>
+          <div class="d-flex flex-column align-items-center">
+            <a class="btn btn-primary btn-lg rounded-pill px-4 me-lg-3 mb-3 mb-lg-0" href="#donate">
+              <i class="bi-heart-fill me-2"></i>
+              Donate
+            </a>
+          </div>
+		  <br/>
+		  
+		  <!-- Constrained Image with Link -->
+		  <div class="mx-auto" style="max-width: 800px;">
+		    <a href="#" id="viewFullSizeLink" class="text-decoration-none">
+		      <div class="position-relative">
+		        <Image 
+		          src={imgReference} 
+		          inferSize={true} 
+		          alt="Joshua House Warming Shelter Benefit" 
+		          class="img-fluid rounded shadow"
+		          style="max-height: 500px; width: 100%; object-fit: cover;"
+		          id="constrainedImage"
+		        />
+		        <div class="position-absolute bottom-0 start-0 end-0 text-center pb-3">
+		          <span class="badge bg-primary py-2 px-3">
+		            <i class="bi-arrows-fullscreen me-2"></i>Click to view full size
+		          </span>
+		        </div>
+		      </div>
+		    </a>
+		  </div>
+		  
+		  <!-- Ticket Purchase Instructions -->
+		  <div class="mt-5 p-4 mx-auto" style="max-width: 900px; background-color: rgba(255, 255, 255, 0.95); border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+		    <h3 class="h4 fw-bold text-dark mb-4">
+		      <i class="bi-ticket-perforated text-primary me-2"></i>
+		      Purchase Tickets for the Benefit
+		    </h3>
+		    
+		    <p class="lead fw-bold text-dark mb-3">
+		      <strong>To purchase tickets here:</strong>
+		    </p>
+		    <p class="lead text-dark mb-3">
+		      Select <strong>"Donate"</strong> <em>(above)</em> and in the <em>"Custom Amount"</em> type in $45 for 1, or $90 for 2, or whatever multiple of $45 you would like.
+		    </p>
+		    <p class="lead fw-bold text-dark mb-3">
+		      <strong>Bring your receipt with you to the Benefit on Dec. 9th, this is your Ticket!</strong>
+		    </p>
+		    <p class="lead fst-italic text-muted mb-3" style="font-size: 0.95rem;">
+		      <em>The donation figure on the site does not accurately reflect the money raised to date, which is approximately $35,000.</em>
+		    </p>
+		    <p class="lead fw-bold text-dark mb-2">
+		      <strong>Tickets can also be purchased at</strong>
+		    </p>
+		    <p class="lead fw-bold text-dark mb-1">
+		      <strong>The Witches Brew</strong>
+		    </p>
+		    <p class="lead fw-bold text-dark mb-0">
+		      <strong>Main Street, Newport</strong>
+		    </p>
+		  </div>
+        </div>
+      </div>
+	  
+    </div>
+  </div>
+</header>
+
+<!-- Lightbox Modal -->
+<div id="imageLightbox" class="position-fixed top-0 start-0 w-100 h-100 d-none" style="background-color: rgba(0,0,0,0.95); z-index: 9999; cursor: pointer;">
+  <button id="closeLightbox" class="btn btn-light position-absolute top-0 end-0 m-4" style="z-index: 10000;">
+    <i class="bi-x-lg"></i> Close
+  </button>
+  <div class="d-flex align-items-center justify-content-center h-100 p-4">
+    <img id="lightboxImage" src="" alt="Joshua House Warming Shelter Benefit" class="img-fluid" style="max-height: 90vh; max-width: 90vw;">
+  </div>
+</div>
+
+<script>
+  // Lightbox functionality
+  const viewFullSizeLink = document.getElementById('viewFullSizeLink');
+  const constrainedImage = document.getElementById('constrainedImage');
+  const lightbox = document.getElementById('imageLightbox');
+  const lightboxImage = document.getElementById('lightboxImage');
+  const closeLightbox = document.getElementById('closeLightbox');
+  
+  if (viewFullSizeLink && lightbox && lightboxImage) {
+    // Open lightbox
+    viewFullSizeLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      lightboxImage.src = constrainedImage.src;
+      lightbox.classList.remove('d-none');
+      document.body.style.overflow = 'hidden';
+    });
+    
+    // Close lightbox
+    const closeLightboxFunc = () => {
+      lightbox.classList.add('d-none');
+      document.body.style.overflow = 'auto';
+    };
+    
+    lightbox.addEventListener('click', closeLightboxFunc);
+    closeLightbox.addEventListener('click', (e) => {
+      e.stopPropagation();
+      closeLightboxFunc();
+    });
+    
+    // Prevent closing when clicking the image itself
+    lightboxImage.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+    
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !lightbox.classList.contains('d-none')) {
+        closeLightboxFunc();
+      }
+    });
+  }
+</script>
+
+<style>
+  #viewFullSizeLink:hover .badge {
+    background-color: #0056b3 !important;
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+  }
+  
+  #imageLightbox {
+    transition: opacity 0.3s ease;
+  }
+</style>

@@ -1,7 +1,7 @@
 ---
-// Main page with Option 1: Two-Column Layout with Expandable Image
+// Option 4: Constrained Size with "View Full Size" Link
 import BootstrapLayout from '../layouts/BootstrapLayout.astro';
-import HeaderOption1 from '../components/home/HeaderOption1.astro';
+import HeaderOption4 from '../components/home/HeaderOption4.astro';
 import Section1 from '../components/home/Section1.astro';
 import Section2 from '../components/home/Section2.astro';
 import VideoSection from '../components/home/VideoSection.astro';
@@ -10,18 +10,18 @@ import Section5 from '../components/home/Section5.astro';
 import Section6 from '../components/home/Section6.astro';
 ---
 
-<BootstrapLayout title="Joshua House Warming Shelter - Home (Option 1)">
+<BootstrapLayout title="Joshua House Warming Shelter - Home (Option 4)">
   <!-- Option Selector Banner -->
   <div class="bg-info text-white py-2 text-center">
     <div class="container">
       <strong>Layout Options:</strong>
-      <a href="/" class="text-white fw-bold mx-2">Option 1 (Current)</a> |
+      <a href="/" class="text-white mx-2">Option 1</a> |
       <a href="/home_option_2" class="text-white mx-2">Option 2</a> |
-      <a href="/home_option_4" class="text-white mx-2">Option 4</a>
+      <a href="/home_option_4" class="text-white fw-bold mx-2">Option 4 (Current)</a>
     </div>
   </div>
   
-  <HeaderOption1 />
+  <HeaderOption4 />
   <Section6 />
   <Section1 />
   <Section2 />
