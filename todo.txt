@@ -1,4 +1,4 @@
 
 
-- fix section colors (doesnt alternate near bottom)
-- video is https://www.youtube.com/watch?v=P2aaFJucszs
+	X	- fix section colors (doesnt alternate near bottom)
+	X	- video is https://www.youtube.com/watch?v=P2aaFJucszs
